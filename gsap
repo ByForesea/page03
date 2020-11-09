@@ -1,0 +1,16 @@
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+  mounted() {
+    gsap.to(".OceanBottomContainer > img", {
+      x: "-100%",
+      scrollTrigger: {
+        trigger: ".OceanBottomContainer",
+        start: "top center",
+        end: "bottom top",
+        scrub: true,
+        markers: true,
+      },
+    });
+  },
+};
